@@ -39,9 +39,9 @@ body = { add_charge_state: { 'statutory-provision' => 'Building Act 1984 section
                              'originating-authority' => 'an authority',
                              'further_information_location' => 'abc' } }
 
-url = base_url + ':8001/v1.0/sessions'
+url = hostname + ':8001/v1.0/sessions'
 
-session_key = RestClient.post(url, 'testuser')
+session_key = http.post(url, 'testuser')
 
 #url += '/' + session_key + '/state/maintain_frontend'
 #session_response = RestClient.put(url, body.to_json, content_type: 'json')
